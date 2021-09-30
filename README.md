@@ -1,0 +1,2 @@
+# web-technologies-intro
+ Repository that comprises all work done during the course of Web Technologies Introduction at University of Aveiro. The objectives are providing the first notions of web programming tools, with particular focus on the creation of web pages of small and medium complexity. Students learn how to design programs that manipulate web interface query objects and data structures.
