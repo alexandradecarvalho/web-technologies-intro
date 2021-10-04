@@ -35,37 +35,3 @@ HTML5 offers more meaningful semantic elements and many CSS3 modules allow lean 
 In responsive web design, pixels as a measurement unit aren't flexible enough. Instead, we should work with relative measurement units, typically "em"/"ems" and percentages. 
 
 **Screen size** is the physical display area of a device. **Viewport** is the content area within the browser window, excluding toolbars, tabs, etc. 
-
-
-
-#### 6. HTML5 - why it's so good
-
-##### 
-
-##### Exercise 1.1 - Write a well-structured English sentence with invalid tokens in  it. Then write another sentence with all valid tokens but with invalid  structure.
-
-- Í like the sün. (Í and ü are not valid tokens in English but "I like the sun" is a well-structured sentence)
-- Sun me likes. (all valid tokens but invalid structure)
-
-##### 
-
-##### Exercise 1.4 - If you run a 10 kilometer race in 43 minutes 30 seconds, what is  your average time per mile? What is your average speed in miles per  hour? (Hint: there are 1.61 kilometers in a mile)
-
-```
->>> 43*60 + 30 # 10 km time in seconds
-2610
->>> 2610*1.61 / 10 # 1 mile time in seconds
-420.21000000000004
->>> 420.21 / 60 # 1 mile time in minutes 
-7.0035
-```
-
-### 
-
-### 📣 Variables, expressions and statements 📣
-
-#### 
-
-#### 1. Values and Types
-
-A **value** is one of the basic units of a program. There are different **types** of values: `2` is a whole number, an **integer**, so its type is `int`;  `2.5` is a number with a fractional part but its type is called `float` because these numbers are represented in a format called **floating-point**; and `"Hello, World!"` is a `string`, because it contains a **"string"**  (sequence) of letters. If you are not sure what type a value has, the interpreter can tell you:
