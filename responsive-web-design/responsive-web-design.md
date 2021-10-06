@@ -202,5 +202,4 @@ Media queries work when we know the sizes of the targeted screens. This means me
 
 #### 2. Why proportional layouts are essential for responsive designs
 
-When a viewport falls between two fixed-width sizes of our media queries, the design might require horizontal scrolling. We want a fluid design, that flexes and adapts proportionally to any viewport size, not only the few ones specified in a media query. blem with the media queries shown above is that they cover a very narrow spectrum of viewports. Media queries work when there is a specific target device. They make the design be static until a size "break point" is reached, at which point the design "snaps" to the new styles. We need a more fluid layout than this.
-
+When a viewport falls between two fixed-width sizes of our media queries, the design might require horizontal scrolling. We want a fluid design, that flexes and adapts proportionally to any viewport size, not only the few ones specified in a media query.
