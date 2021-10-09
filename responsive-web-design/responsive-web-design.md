@@ -210,9 +210,7 @@ When a viewport falls between two fixed-width sizes of our media queries, the de
 
 > target + context = result
 
-Let's take that we have a `div` within a `div`. The inner `div`, our *target* (what we want to convert from fixed size to proportional layout), has a width of **x** px. The outer `div`, our *context*, has a width of **y** px. The inner div's width will be x/y. Some say not to round this number up, in order to display a more accurate response.
-
-Now, we must be careful with the context as it is the element immediately outside our target element. 
+Let's take that we have a `div` within a `div`. The inner `div`, our *target* (what we want to convert from fixed size to proportional layout), has a width of **x** px. The outer `div`, our *context*, has a width of **y** px. The inner `div`'s width will be x/y. Some say not to round this number up, in order to display a more accurate response. Now, we must be careful with the context as it is the element immediately outside our target element. 
 
 
 
@@ -223,3 +221,13 @@ Now, we must be careful with the context as it is the element immediately outsid
 "em" is meant to express the leter m pronunciation. This letter was used to establish the size of a font because it is the largest letter. 
 
 
+
+#### 5. Fluid images
+
+Images, and other media, when its `max-width` is set to 100, will automatically scale up to 100% of their context element. Then, using CSS specificity can help define different sizes for specific elements. Sometimes, the `max-width` not go beyond its original size, which affect rendering.
+
+
+
+#### 6. Serving different images for different screen sizes
+
+Most of the time, stored images are be much bigger than they need to, wasting a lot of space. The "Adaptive Images" automatically creates, at defined size breakpoints, a resized version of the images based on their full size. This solution requires Apache 2, PHP 5.x, and GD Lib. With this solution, it is advisable to separate background images (and others that shouldn't be resized) from the rest of the images, usually in another folder called "assets". 
