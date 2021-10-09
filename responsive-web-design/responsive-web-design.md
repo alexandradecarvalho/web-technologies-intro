@@ -203,3 +203,23 @@ Media queries work when we know the sizes of the targeted screens. This means me
 #### 2. Why proportional layouts are essential for responsive designs
 
 When a viewport falls between two fixed-width sizes of our media queries, the design might require horizontal scrolling. We want a fluid design, that flexes and adapts proportionally to any viewport size, not only the few ones specified in a media query.
+
+
+
+#### 3. Amending a design from fixed to proportional layout
+
+> target + context = result
+
+Let's take that we have a `div` within a `div`. The inner `div`, our *target* (what we want to convert from fixed size to proportional layout), has a width of **x** px. The outer `div`, our *context*, has a width of **y** px. The inner div's width will be x/y. Some say not to round this number up, in order to display a more accurate response.
+
+Now, we must be careful with the context as it is the element immediately outside our target element. 
+
+
+
+#### 4. Using ems rather than pixels for typography
+
+"em" is an alternate font size to pixels, it is the percentage of the font in relation to the context element. If we set the body font size to 100% and use "ems" in all following typography, they will all be in proportion to that 100%, so to increase or decrease all font sizes is a simple task of decreasing the initial body statement, and all the fonts will increase/decrease proportionally. By default, the font size is 16px, so 100% or 1em will be equivalent to 16px. 
+
+"em" is meant to express the leter m pronunciation. This letter was used to establish the size of a font because it is the largest letter. 
+
+
