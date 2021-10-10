@@ -231,3 +231,16 @@ Images, and other media, when its `max-width` is set to 100, will automatically 
 #### 6. Serving different images for different screen sizes
 
 Most of the time, stored images are be much bigger than they need to, wasting a lot of space. The "Adaptive Images" automatically creates, at defined size breakpoints, a resized version of the images based on their full size. This solution requires Apache 2, PHP 5.x, and GD Lib. With this solution, it is advisable to separate background images (and others that shouldn't be resized) from the rest of the images, usually in another folder called "assets". 
+
+
+
+#### 7. Where fluid grids and media queries come together
+
+Media queries help where fluid layouts lack, and fluid layouts ease the change from one set of defined styles within a media query to another.
+
+
+
+#### 8. CSS grid systems
+
+Many CSS grid systems use specific CSS classes. The Columnal grid system is based on dividing the viewport into 12 columns. f the time, stored images are be much bigger than they need to, wasting a lot of space. The "Adaptive Images" automatically creates, at defined size breakpoints, a resized version of the images based on their full size. This solution requires Apache 2, PHP 5.x, and GD Lib. With this solution, it is advisable to separate background images (and others that shouldn't be resized) from the rest of the images, usually in another folder called "assets". 
+
