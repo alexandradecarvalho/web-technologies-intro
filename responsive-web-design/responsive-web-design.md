@@ -244,3 +244,24 @@ Media queries help where fluid layouts lack, and fluid layouts ease the change f
 
 Many CSS grid systems use specific CSS classes. The Columnal grid system is based on dividing the viewport into 12 columns. f the time, stored images are be much bigger than they need to, wasting a lot of space. The "Adaptive Images" automatically creates, at defined size breakpoints, a resized version of the images based on their full size. This solution requires Apache 2, PHP 5.x, and GD Lib. With this solution, it is advisable to separate background images (and others that shouldn't be resized) from the rest of the images, usually in another folder called "assets". 
 
+
+
+### :five: HTML5 for Responsive Designs :five:
+
+
+
+#### 1. What parts of HTML5 can we use today?
+
+HTML5 provides specifications for dealing with web applications, helps building better responsive web pages, and has tools to handle forms and user input. This allows avoiding other resource heavy technologies, such as JavaScript for validation. A ***polyfill*** is a JavaScript shim that replicates the characteristics of new browsers in older browsers. queries** is a CSS3 module that allow target specific styles depending on the device's display capabilities. 
+
+
+
+#### 2. How to write HTML5 pages
+
+The HTML5 doctype is the shortest method of telling the browser to render a page in "standard mode". Like the rest of HTML5, it is supposed to be efficient. Then, in the <html> tag, we specify the primary language for the elements' contents and textual attributes. Finally, the character encoding is specified in the <meta> tag, almost always being UTF-8. Valid HTML5 doesn't need end tags nor slashes in void tags, nor quotations marks. However, it can increase readability. Also, HTML5's <a> tag can wrap around groups of elements, except for other <a> tags, or forms. Conforming features, like the `border` attribute on an image, are obsolete features that still work (with warnings, so they should be avoided). Non-conforming features, however, are features that shouldn't be used anymore despite still being rendered in some older browsers.
+
+
+
+#### 3. New semantic elements in HTML5
+
+Semantics is "the branch of linguistics and logic concerned with meaning". So, giving our *markup* meaning. With general `div` sections, user agents, like browsers or search engine crawlers, don't understand the purpose of the different sections. Now, generic sections are defined through the <section> element. This is intended to separate contents, and not used for styling purposes, in which case, <div>'s are still probably the best. The <nav> element is used to define major navigational blocks, with links to other pages or parts of the page. The <article> element is used to wrap a self-contained piece of content, such as a blog post. The <aside> element is used for content that is not closely related to the content around it, such as sidebars or advertising. Many consecutive headings and subheadings can be wrapped inside a <hgroup> to hide the secondary elements from the HTML outline. Each <hgroup> section can have its own set of headings. The <header> tag should be used as an introduction to content. The <footer> element should contain information about the section above. The <address> element should be used for contact information.
