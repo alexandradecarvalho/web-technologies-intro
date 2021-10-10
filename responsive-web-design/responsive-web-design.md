@@ -265,3 +265,15 @@ The HTML5 doctype is the shortest method of telling the browser to render a page
 #### 3. New semantic elements in HTML5
 
 Semantics is "the branch of linguistics and logic concerned with meaning". So, giving our *markup* meaning. With general `div` sections, user agents, like browsers or search engine crawlers, don't understand the purpose of the different sections. Now, generic sections are defined through the <section> element. This is intended to separate contents, and not used for styling purposes, in which case, <div>'s are still probably the best. The <nav> element is used to define major navigational blocks, with links to other pages or parts of the page. The <article> element is used to wrap a self-contained piece of content, such as a blog post. The <aside> element is used for content that is not closely related to the content around it, such as sidebars or advertising. Many consecutive headings and subheadings can be wrapped inside a <hgroup> to hide the secondary elements from the HTML outline. Each <hgroup> section can have its own set of headings. The <header> tag should be used as an introduction to content. The <footer> element should contain information about the section above. The <address> element should be used for contact information.
+
+
+
+#### 4. Practical usage of HTML5's structural elements
+
+Even though there is no element to define the main content, since everything else can be defined, what's left is automatically denoted as the main content.
+
+
+
+#### 5. HTML5 text-level semantics
+
+**Inline** elements can also be called text-level semantics. The <b> element is meant to define a section of text to which one should draw its attention to, and in most browsers styles it with bold letters. The <em> element emphasizes the given content. Alternately, <i> defines a different quality of text, in an variant mood, and browsers render that text in italics. 

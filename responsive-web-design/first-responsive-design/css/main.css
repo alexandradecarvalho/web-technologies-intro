@@ -13,7 +13,7 @@ img, object, video, embed {
     max-width: 100%;
 }
 
-#header {
+header {
     margin-right: 1.041667%;  /* 10 ÷ 960 */
     margin-left: 1.041667%;  /* 10 ÷ 960 */
     width: 97.91667%; /* 940 ÷ 960 */
@@ -47,7 +47,7 @@ img, object, video, embed {
     color: black; 
   }
 
-#sidebar {
+aside {
     border-right-color: #e8e8e8;
     border-right-style: solid;
     border-right-width: 2px;
@@ -90,7 +90,7 @@ img, object, video, embed {
     font-size: .550724638em; /* 38 ÷ 69 */
 }
 
-#footer {
+footer {
     float: left;
     margin-right: 1.041667%;  /* 10 ÷ 960 */
     margin-left: 1.041667%;  /* 10 ÷ 960 */
@@ -99,7 +99,7 @@ img, object, video, embed {
 }
 
 @media screen and (max-width: 768px) {
-    #wrapper,#header,#footer,#navigation {
+    #wrapper,header,footer,#navigation {
         width: 768px; 
         margin: 0px;
     }  
@@ -128,7 +128,7 @@ img, object, video, embed {
         line-height: 60px; 
         font-size: 3em; 
     }
-    #content, #sidebar { 
+    #content, aside { 
         margin-top: 20px; 
         padding-right: 10px; 
         padding-left: 10px; 
@@ -141,7 +141,7 @@ img, object, video, embed {
         width: 28.9398281%; /* 698 ÷ 202 */
         /*height: 394px;*/ 
     }
-    #sidebar { 
+    aside { 
         border-right: none; 
         border-top: 2px solid #e8e8e8; 
         padding-top: 20px; 
