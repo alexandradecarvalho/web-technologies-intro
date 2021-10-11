@@ -277,3 +277,46 @@ Even though there is no element to define the main content, since everything els
 #### 5. HTML5 text-level semantics
 
 **Inline** elements can also be called text-level semantics. The <b> element is meant to define a section of text to which one should draw its attention to, and in most browsers styles it with bold letters. The <em> element emphasizes the given content. Alternately, <i> defines a different quality of text, in an variant mood, and browsers render that text in italics. 
+
+
+
+#### 6. Adding accessibility to your site with WAI-ARIA
+
+WAI-ARIA means to make dynamic content on a page accessible, describing dynamic elements' roles, states and properties. ARIA's landmark roles allow screen readers to switch between the different regions of the page. They exist for the following regions:
+
+* `application` - to specify the region of a web application
+* `banner` - to specify a small region with the width of the site, such as the header or the logo
+* `complementary` - to specify a complementary area than the main section of the page
+* `contentinfo` - to specify an area of information about the main page, like the footer
+* `form` - to specify a form
+* `main` - to specify the main content of the page
+* `navigation` - to specify navigation links for current or related documents
+* `search` - to specify an area that performs a search
+
+Like any attribute, it's possible to style ARIA roles, using the attribute selector:
+
+```css
+nav[role="navigation"]{
+    ...
+}
+```
+
+However, ARIA isn't limited to landmark roles only. 
+
+
+
+#### 7. Embedding media in HTML5
+
+Because of Apple, HTML5 can perfectly handle rich media rendering, striping Flash technology from its reign. 
+
+
+
+#### 8. Adding video and audio the HTML5 way
+
+The syntax for adding video to a page is much like adding an image: <video src="myVideo.ogg"></video>. It is also possible to add text in between the opening and closing tags, to be displayed when the browser can't render the media. There are also additional attributes, such as `width` and `height`. To get the default playback controls, we need to add the `controls` attribute. There is also an `autoplay` attribute:
+
+```html
+<video src="video/myVideo.mp4" width="640" height="480" controls autoplay>Some text ot be displayed when video rendering fails</video>
+```
+
+Some other attributes are `preload` to control pre-loading of media, `loop` to repeat the media in loop, and `poster` to define a poster frame for the media. Audio works the same way, with the <audio> tag. It just doesn't have the `width`, `height` and `poster` attributes, and obviously doesn't have a playback area for visible content.

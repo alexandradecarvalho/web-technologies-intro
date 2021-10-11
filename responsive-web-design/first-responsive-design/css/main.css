@@ -19,7 +19,7 @@ header {
     width: 97.91667%; /* 940 ÷ 960 */
 }
 
-#navigation {
+nav {
     padding-bottom: 25px; 
     margin-top: 26px; 
     margin-left: -1.0416667%; /* 10 ÷ 960 */ 
@@ -32,12 +32,12 @@ header {
     border-bottom-width: 4px; 
 }
 
-#navigation ul li { 
+nav ul li { 
     display: inline-block;
     margin-right: 2.6595745%; /* 25 ÷ 940 */    
 }
 
-#navigation ul li a { 
+nav ul li a { 
     height: 42px; 
     line-height: 42px; 
     text-decoration: none; 
@@ -99,7 +99,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    #wrapper,header,footer,#navigation {
+    #wrapper,header,footer,nav {
         width: 768px; 
         margin: 0px;
     }  
@@ -115,7 +115,7 @@ footer {
     #logo span {
         color: #dfdada;
     }
-    #navigation { 
+    nav { 
         text-align: center; 
         background-image: none;
         border-top-color: #bfbfbf; 
@@ -123,7 +123,7 @@ footer {
         border-top-width: 4px; 
         padding-top: 20px;
     }
-    #navigation ul li a { 
+    nav ul li a { 
         background-color: #dedede; 
         line-height: 60px; 
         font-size: 3em; 
@@ -158,19 +158,19 @@ footer {
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1080px) {   
-    #navigation ul li a { 
+    nav ul li a { 
         font-size: 1.4em; 
     }
 }
     
 @media screen and (min-width: 805px) and (max-width: 1000px) {
-    #navigation ul li a {
+    nav ul li a {
         font-size: 1.25em;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 804px) {
-    #navigation ul li a {
+    nav ul li a {
         font-size: 1.1em;
     }
 }
