@@ -1,0 +1,17 @@
+CACHE MANIFEST
+#v1
+CACHE:
+home.html
+css/main.css
+imgs/Academy_Award_trophy.png
+imgs/flags.jpg
+imgs/kk.jpg
+imgs/Moulin_Rouge.jpg
+imgs/midnightRun.jpg
+img/wyatt.jpg
+
+NETWORK:
+*
+
+FALLBACK:
+/ /offline.html

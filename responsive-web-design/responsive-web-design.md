@@ -320,3 +320,156 @@ The syntax for adding video to a page is much like adding an image: <video src="
 ```
 
 Some other attributes are `preload` to control pre-loading of media, `loop` to repeat the media in loop, and `poster` to define a poster frame for the media. Audio works the same way, with the <audio> tag. It just doesn't have the `width`, `height` and `poster` attributes, and obviously doesn't have a playback area for visible content.
+
+
+
+#### 9. Offline Web applications
+
+Because responsiveness is tied to mobile usage, providing the means to users accessing our web application while *offline* seems useful. This works by having a `.manifest` file with pointers to all pages that can be accessed *offline*. The file also lists all resources needed (images, JS, etc). The browser then reads the `.manifest` file and downloads the resources listed, caching them locally. In the opening HTML tag, we point to the `.manifest` file: 
+
+<html lang="en" manifest="/offline.manifest">
+
+The file must start with `CACHE MANIFEST`. Then, the `CACHE:` section lists the relative (or absolute) paths for the files needed *offline*. Also, all HTML files that point to the *offline* manifest are added automatically, but with this method they are only downloaded and cached once visited. The `NETWORK:` section lists resources that should not be used from cache while online, so it's usually the `*` character, which is the **online whitelist wildcard flag**. 
+
+Another way of making the pages available *offline* is by adding `manifest="/offline.manifest"` to the opening <html> tag. However, this makes available only the HTML page, and not other resources such as JavaScript files, images, etc. If these are essential, they should be specified in the `CACHE:` section.
+
+When there are changes in the website, the manifest file should be changed somehow, in order for it to be "rerun", and load the changed files again. One way of doing this is by increasing the version in the header comment.
+
+
+
+### :paintbrush: CSS3: Selectors, Typography and Color Modes :paintbrush:
+
+
+
+#### 1. What CSS3 offers the frontend developer
+
+With just a few lines of code, CSS3 can help the responsive design to load faster, not relying on resources (images, JavaScript,...) as much anymore, and be easier to maintain and change - mostly because the visual effects are done through code and not images, changing some parameters like colors can be done in seconds.
+
+
+
+#### 2. Anatomy of a CSS rule
+
+```css
+.round{
+	border-radius: 10px;
+}
+```
+
+Above, is a CSS rule. In this rule, `.round` is the **selector**, the rest being the **declaration**. In this declaration, the `border-radius:` part is the **property**, and the `10px` part is the **value**. 
+
+
+
+#### 3. Vendor prefixes and how to use them
+
+**Vendor prefixes**, such as `-webkit-` for Webkit based browsers and `-ms-` for Microsoft (IE), are used by browsers to test "experimental" CSS features. Browsers ignore the prefixes that aren't meant for them and apply the ones they can. This is faster and more elegant and robust than using images, but still leads a little to code bloat. If time/budget are tight, one might decide to omit prefixes for any browser with, for example, less than 3% of usage at the moment. 
+
+
+
+#### 4. Quick and useful CSS3 tricks
+
+Markup with text that we want to span across multiple columns:
+
+```html
+<div id="main" role="main">
+<p>
+    Text goes here
+</p>
+<p>
+    Text goes here
+</p>
+</div>
+```
+
+If we want to define a given column width, and make the number of columns with that width dependable of the viewport width, the code can be as such:
+
+```css
+#main {
+	column-width: 12em;
+}
+```
+
+If, however, we want to define a fixed number of columns, and make their width dependable of the viewport width, the code can be as such:
+
+```css
+#main {
+	column-count: 4;
+}
+```
+
+We can even customize the gap and a divider between columns:
+
+```css
+#main {
+    column-gap: 2em;
+    column-rule: thin dotted #999;
+    column-width: 12em;
+}
+```
+
+There is also an attribute to divide a big word into several lines if it doesn't fit in one: `word-wrap: break-word;`. 
+
+
+
+#### 5. New CSS3 selectors and how to use them
+
+We can apply a rule to an element with a given attribute value:
+
+```css
+img[alt="atwi_oscar"] {
+	border: 3px dashed #e15f5f;
+}
+```
+
+We can select elements whose given attribute *starts* with a certain value:
+
+```css
+img[alt^="film"] {
+	border: 3px dashed #e15f5f;
+}
+```
+
+Or, we can select elements whose given attribute *ends* with a certain value:
+
+```css
+img[alt$="film"] {
+	border: 3px dashed #e15f5f;
+}
+```
+
+We can also select elements whose given attribute *contains* a matching substring:
+
+```css
+img[alt*="film"] {
+	border: 3px dashed #e15f5f;
+}
+```
+
+There's a selector for the first item in a list - `li:first-child` - and also one for the last item in a list - `li:last-child`. There is also a selector for a nth element, selecting the element based on a position (passing an integer) - `nth-child(n)` - or range of positions, like `:nth-child(even)`. We can also pass numerical expressions to express a range of positions, like `:nth-child(3n+1)`.
+
+The selector `(:not)` is used to select everything that isn't something else:
+
+```css
+nav ul li:not(.internal) a {
+	color: #fe0208;
+}
+```
+
+Besides pseudo-classes, there are also pseudo-elements, separated by double colon. A particularly handy example: 
+
+```css
+p::first-line {
+	color: #ff0cff;
+}
+```
+
+
+
+#### 6. Custom web typography
+
+`@font-face` is a rule for adding custom fonts. Because there are many font formats, like the **Embedded OpenType**
+**(EOT)**, the **TrueType (TTF)**, the **Scalable Vector Graphics (SVG)**, or the **Web Open Font Format (WOFF)**, it is necessary to cover all implementations.
+
+
+
+r prefixes**, such as `-webkit-` for Webkit based browsers and `-ms-` for Microsoft (IE), are used by browsers to test "experimental" CSS features. Browsers ignore the prefixes that aren't meant for them and apply the ones they can. This is faster and more elegant and robust than using images, but still leads a little to code bloat. If time/budget are tight, one might decide to omit prefixes for any browser with, for example, less than 3% of usage at the moment. 
+
