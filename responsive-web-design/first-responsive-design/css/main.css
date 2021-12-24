@@ -1,8 +1,13 @@
+body {
+    background: url(../imgs/grunge.jpg) repeat;
+}
+
 #wrapper {
     margin-right: auto;
     margin-left: auto;
     width: 90%;
     max-width: 1414px;
+    background-color: hsla(0, 0%, 100%, 0.8);
 }
 
 .caps {
@@ -60,8 +65,8 @@ nav ul li a {
     color: black; 
 }
 
-nav ul li:nth-child(even) a {
-    color: #fe0208;
+nav ul li:nth-child(odd) a {
+    color: rgb(254, 2, 8);
 }
 
 aside {
