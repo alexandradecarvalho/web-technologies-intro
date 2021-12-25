@@ -474,3 +474,24 @@ p::first-line {
 #### 7. Help - my CSS3 @font-face headings look messy
 
 While using `@font-face` fonts in heading elements, it is important to always define the `font-weight`. Something to take in consideration is the font file size. The most lightweight ones add an extra 70KB of data. CSS3 allows us to use the **RGB** and **HSL** methods for declaring color, allowing the use of an alpha channel alongside (**RGBA** and **HSLA** respectively). RGB (Red, Green, and Blue) is a coloring system that defines different values for the red, green, and blue components of a color. In the CSS, after defining the color mode (for example, rgb) each of the three values separated by commas inside the parenthesis. HSL (Hue, Saturation, and Lightness - not the same as HSB!) works on a 360° color wheel. The first value in a HSL color, represents Hue, and has Yellow at 60°, Green at 120°, Cyan at 180°, Blue at 240°, Magenta at 300° and Red at 360° -  mnemonic "Young Guys Can Be Messy Rascals".  The following two values, in percentages, are for saturation and lightness. An element with an alpha transparency will show what's beneath it. An HSLA/RGBA has the same syntax as the HSL/RGB, but one last field for the oppacity, with a value between 0 and 1. 
+
+
+
+### :open_mouth: Stunning Aesthetics With CSS3 :open_mouth:
+
+
+
+#### 1. Text shadows with CSS3
+
+To add shadows, we can use `text-shadow`:
+
+```css
+.element {
+	text-shadow: 1px 1px 1px #cccccc;
+}
+```
+
+The first value is the shadow to the right, the second one is the shadow below, and the third one is the blur but can be omitted. These values can be expressed in pixels, em or rem, but because they are often very small values, pixels tend to look good across all viewports. The final value is the colour of the shadow, written in HEX, RGB(A) or HSL(A).
+
+Shadows to the left and above can be achieved using negative values: `text-shadow: -4px -4px 0px #dad7d7;`. It's possible to add multiple text shadows, separated by a comma.
+
