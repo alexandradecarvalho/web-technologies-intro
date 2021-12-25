@@ -495,3 +495,32 @@ The first value is the shadow to the right, the second one is the shadow below, 
 
 Shadows to the left and above can be achieved using negative values: `text-shadow: -4px -4px 0px #dad7d7;`. It's possible to add multiple text shadows, separated by a comma.
 
+
+
+#### 2. Box shadows
+
+Box shadows follow the same syntax as text shadows: horizontal offset, vertical offset, blur and color. They can be used to create an "inset" shadow, which applies to the inside of the element, and not the outside: `box-shadow:inset 0 0 40px #000000;`. It's possible to add multiple box shadows, separated by a comma. 
+
+
+
+#### 3. Background gradients
+
+To set a background gradient for an element, we don't need to use graphical resources, we can just do it with CSS3. This background automatically fits the element, as it expands or shrinks.
+
+```css
+background: linear-gradient(90deg, #ffffff -50%, #e4e4e4 50%, #ffffff 100%);
+```
+
+In linear backgrounds, inside the parenthesis, the first optional value refers to the direction of the gradient, the default being vertical, top to bottom. Next up is the colour at the start and the percentage of the length at which the first colour would start fading into the next. Next is the colour at the end of the gradient and the percentage of the length at which the penultimate colour starts fading into this last one.
+
+Radial backgrounds also begin from a central point, but spread out smoothly in an elliptical or circular shape.
+
+```css
+background: radial-gradient(center, ellipse cover, #ffffff 72%, #dddddd 100%);
+```
+
+Within the parenthesis, we firstly specify the starting point. Then, we define the shape (circle or ellipse) and the size. The size can be `closest-side` (also known as `contain`, the shape goes all the way until it meets a side of the box that is nearest from the centre), `closest-corner` (the shape goes all the way until it meets the closest corner from the centre), `farthest-side` (the shape goes all the way until it meets a side of the box that is furthest from the centre), and `farthest-corner` (also known as `cover`, the shape goes all the way until it meets the furthest corner from the centre). Then, we can define the colour points for each percentage of the radius. 
+
+The gradients can be repeated throughout the background, by adding the prefix `repeating-`. 
+
+
