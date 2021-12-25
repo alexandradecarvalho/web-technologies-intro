@@ -543,5 +543,19 @@ All these abstract features implementations can be put together to create cohesi
 
 
 
+#### 7. Multiple background images
 
+Many times, the top and the bottom of a page, or of a section, have different background images. 
+
+```css
+background: url('../img/1.png'), url('../img/2.png'), url('../img/3.png');
+```
+
+The syntax shows a stack of images. The image listed first appears nearest to the top. If the last declaration is a colour, this will show below the images above, being seen if the images are PNG files and have (partially) transparent backgrounds. 
+
+These images don't need to be the same size. We can set different sizes for each image, using the `background-size` property. The size values wanted for each image are declared, in the format width and height (in that order), separated by commas and in the order of the declarations above. The values can be pixels, percentages, auto (which sets the image as its native size), cover (which expands the image to cover the area of the element, preserving the ratio), or contain (which expands the image to fit the longest side of the element, preserving the ratio):
+
+```css
+background-size: 100% 50%, 300px 400px, auto;
+```
 
