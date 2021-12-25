@@ -537,3 +537,11 @@ Different declarations can be used for different *viewports*, through media quer
 
 
 
+#### 6. Bringing CSS3 properties together
+
+All these abstract features implementations can be put together to create cohesive website designs in a rapid way, while providing changes on the fly. Plus, if correctly written,  it can contain whatever content is needed, without breaking.
+
+
+
+
+
