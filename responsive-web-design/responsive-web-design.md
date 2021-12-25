@@ -524,3 +524,10 @@ Within the parenthesis, we firstly specify the starting point. Then, we define t
 The gradients can be repeated throughout the background, by adding the prefix `repeating-`. 
 
 
+
+#### 4. Background gradient patterns
+
+Both linear and radial gradients can be used to create complex background patterns.
+
+
+
