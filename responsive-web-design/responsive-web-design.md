@@ -527,7 +527,13 @@ The gradients can be repeated throughout the background, by adding the prefix `r
 
 #### 4. Background gradient patterns
 
-Both linear and radial gradients can be used to create complex background patterns.
+Both linear and radial gradients can be used to create complex background patterns. 
+
+
+
+#### 5. Responsive considerations for CSS
+
+Different declarations can be used for different *viewports*, through media queries. linear and radial gradients can be used to create complex background patterns.
 
 
 
