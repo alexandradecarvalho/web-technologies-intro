@@ -559,3 +559,25 @@ These images don't need to be the same size. We can set different sizes for each
 background-size: 100% 50%, 300px 400px, auto;
 ```
 
+It is also possible to specify different positions for the images, the default position being the top left corner. 
+
+
+
+#### 8. More CSS3 features
+
+These are not all the features available, but are some of the ones that give most benefit while being efficient and flexible. 
+
+
+
+#### 9. Sizeable icons which are perfect for responsive design
+
+`@font-face` icons are fonts specifically made to create responsive icons. 
+
+
+
+### :zap: CSS3 Transitions, Transformations and Animations :zap:
+
+
+
+#### 1. What CSS3 transitions are and how we can use them
+
