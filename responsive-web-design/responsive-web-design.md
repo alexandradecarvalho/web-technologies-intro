@@ -613,3 +613,14 @@ An easy way to make everything pretty:
 CSS transformations (both 2D and 3D) define what the element will become. The CSS3 2D Transforms Module allows the following transformations: `scale ` (scales an element to appear larger or smaller), `translate` (moves an element on the screen), `rotate` (rotates the element by the given degrees), `skew` (skews an element with its X and Y coordinates), and `matrix` (moves and shapes transformations with pixel precision). 
 
 There si also a `transform-origin` property to amend the point from which the transformations are applied, the default being the center of the element. 
+
+
+
+#### 3. Dabbling in CSS3 3D transformations
+
+The first important point is to set the `perspective` on the parent element, which activates the 3D space. The larger the perspective value is, the deeper the 3D space is, from the user viewing point. So, for a subtler effect, this value should be higher. This value, however, only applies to the first direct descendent of the element. To pass this perspective on, we can use `-webkit-transform-style: preserve-3d;`. 
+
+
+
+#### 4. Animating with CSS3
+
