@@ -92,13 +92,25 @@ aside {
     box-shadow: 0px 3px 5px #444444;
 }
 
-/*.sideBlock a:nth-child(even){
-    float:right;
+.unSung a:nth-child(odd) img {
+    transform: rotate(3deg);
+    animation: swing 0.1s 5 ease-in;
 }
 
-.sideBlock a:nth-child(odd){
-    float:left;
-}*/
+.unSung a:nth-child(even) img {
+    transform: rotate(-3deg);
+    animation: swing 0.1s 5 0.3s ease-in;
+}
+
+.overHyped a:nth-child(odd) img {
+    transform: rotate(3deg);
+    animation: swing 0.1s 5 0.2s ease-in;
+}
+
+.overHyped a:nth-child(even) img {
+    transform: rotate(-3deg);
+    animation: swing 0.1s 5 0.5s ease-in;
+}
 
 .oscarMain { 
     float: left;
@@ -265,4 +277,22 @@ footer {
     format('svg');
     font-weight: normal;
     font-style: normal;
+}
+
+@keyframes swing {
+    from {
+        transform: rotate(3deg);
+    }
+    20% {
+        transform: rotate(7deg);
+    }
+    60% {
+        transform: rotate(10deg);
+    }
+    80% {
+        transform: rotate(7deg);
+    }
+    to {
+        transform: rotate(3deg);
+    }
 }

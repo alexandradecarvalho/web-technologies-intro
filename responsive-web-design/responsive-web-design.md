@@ -624,3 +624,22 @@ The first important point is to set the `perspective` on the parent element, whi
 
 #### 4. Animating with CSS3
 
+CSS3 employs animation keyframing conventions found in Flash. A CSS3 animation has a keyframes declaration, then used in an animation property. Let's see an example:
+
+```css
+@keyframes warning {
+    0% {
+    	text-shadow: 0px 0px 4px #000000;
+    }
+    50% {
+    	text-shadow: 0 0 20px #000000;
+    }
+    100% {
+    	text-shadow: 0px 0px 4px #000000;
+    }
+}
+```
+
+In the example above, we define the `@keyframes` and give it a name: "warning". Then, we set some percentage points. After declaring the keyframe, we can use reference it: `animation: warning 1.5s infinite ease-in;`. The second value is the `animation-iteration-count` (using infinite makes the animation continuous), and the third value is the timing function.
+
+It is also possible to specify `animation-delay` (to delay when the animation starts), `animation-play-state` (can be set to running or paused) and `animation-fill-mode`.
