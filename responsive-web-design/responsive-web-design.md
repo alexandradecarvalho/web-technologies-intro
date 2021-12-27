@@ -643,3 +643,17 @@ CSS3 employs animation keyframing conventions found in Flash. A CSS3 animation h
 In the example above, we define the `@keyframes` and give it a name: "warning". Then, we set some percentage points. After declaring the keyframe, we can use reference it: `animation: warning 1.5s infinite ease-in;`. The second value is the `animation-iteration-count` (using infinite makes the animation continuous), and the third value is the timing function.
 
 It is also possible to specify `animation-delay` (to delay when the animation starts), `animation-play-state` (can be set to running or paused) and `animation-fill-mode`.
+
+### :pencil: Conquer Forms with HTML5 and CSS3 :pencil:
+
+
+
+#### 1. HTML5 forms
+
+Besides standard input fields and text areas, there is also available a number spinner and a range slider. Input types can be "email", to match the syntax of an email address, "number", that receives a number as input, "url", that tells some browsers it expects a URL, "tel", to expect a telephone number, "color", that produces a color picker, or "search", which sometimes appears differently. We can define some text as a placeholder for a field, to appear when it is empty. There is also some client-side validation to stop users from sending a form without an answer in a required field, defined by `required aria-required="true"`.  If the form is submitted without the field, a warning message should be displayed.
+
+Another HTML5 form attribute that can be added to input fields is `autofocus`, that makes the form load with that field already focused (selected). 
+
+Most browsers autocomplete the values of form fields, where possible, if that setting is turned on. For sensitive data, or to ensure users pay attention when filling out that field, we can disable that option by writting the attribute `autocomplete="off"`. This attribute also works on the <form> tag.
+
+The `pattern` attrivute expects a regular expression and ensures the value passed on that field respects the regex. 
