@@ -588,7 +588,7 @@ A `transition` can be defined by the transition-property (the name of the CSS pr
 Where a rule has multiple properties declared they don't have to transition in the same way:
 
 ```css
-#content a {
+#content a {o
 	transition-property: border, color, text-shadow;
 	transition-duration: 2s, 3s, 8s;
 }
@@ -597,3 +597,19 @@ Where a rule has multiple properties declared they don't have to transition in t
 The durations' order match the order of the properties we want to transition.
 
 Because it's necessary to employ transition effects subtly, unless there is a compelling reason to do otherwise, using the default transition (ease) over a short interval (1 second max) is often best.
+
+An easy way to make everything pretty:
+
+```css
+* {
+	transition: all 1s;
+}
+```
+
+
+
+#### 2. CSS3 2D transformations
+
+CSS transformations (both 2D and 3D) define what the element will become. The CSS3 2D Transforms Module allows the following transformations: `scale ` (scales an element to appear larger or smaller), `translate` (moves an element on the screen), `rotate` (rotates the element by the given degrees), `skew` (skews an element with its X and Y coordinates), and `matrix` (moves and shapes transformations with pixel precision). 
+
+There si also a `transform-origin` property to amend the point from which the transformations are applied, the default being the center of the element. 
