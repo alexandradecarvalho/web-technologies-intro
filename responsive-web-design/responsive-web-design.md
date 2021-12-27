@@ -581,3 +581,19 @@ These are not all the features available, but are some of the ones that give mos
 
 #### 1. What CSS3 transitions are and how we can use them
 
+It's common to create a hover state on hyperlinks, so that the users understand they are hovering over a link. Traditionally, these transitions between states are abrupt - either one state or the other is shown. However, "transitions" allow a smooth transition between two states - not just applied to hover states. The transition is applied to the original element, not the hover state, so that different states such as `:active` can also have different styles and still enjoy the transition.
+
+A `transition` can be defined by the transition-property (the name of the CSS property to be transitioned, such as `background-color`, `text-shadow`, or `all` if applied to all possible properties), the transition-duration (the length of time over which the transition should occur), the transition-timing-function (how the speed of the transition varies through its duration), and the transition-delay (an optional value to determine a delay before the transition starts).
+
+Where a rule has multiple properties declared they don't have to transition in the same way:
+
+```css
+#content a {
+	transition-property: border, color, text-shadow;
+	transition-duration: 2s, 3s, 8s;
+}
+```
+
+The durations' order match the order of the properties we want to transition.
+
+Because it's necessary to employ transition effects subtly, unless there is a compelling reason to do otherwise, using the default transition (ease) over a short interval (1 second max) is often best.
