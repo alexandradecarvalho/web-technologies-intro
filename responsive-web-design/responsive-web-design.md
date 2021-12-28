@@ -650,10 +650,35 @@ It is also possible to specify `animation-delay` (to delay when the animation st
 
 #### 1. HTML5 forms
 
-Besides standard input fields and text areas, there is also available a number spinner and a range slider. Input types can be "email", to match the syntax of an email address, "number", that receives a number as input, "url", that tells some browsers it expects a URL, "tel", to expect a telephone number, "color", that produces a color picker, or "search", which sometimes appears differently. We can define some text as a placeholder for a field, to appear when it is empty. There is also some client-side validation to stop users from sending a form without an answer in a required field, defined by `required aria-required="true"`.  If the form is submitted without the field, a warning message should be displayed.
+Besides standard input fields and text areas, there is also available a number spinner and a range slider. The default range goes from 0 to 100, but can be changed with the `min` and `max` properties. 
+
+<input id="howYouRateIt" name="howYouRateIt" type="range" min="1" max="10" value="5" >
+
+Input types can be "email", to match the syntax of an email address, "number", that receives a number as input, "url", that tells some browsers it expects a URL, "tel", to expect a telephone number, "color", that produces a color picker, or "search", which sometimes appears differently. We can define some text as a placeholder for a field, to appear when it is empty. There is also some client-side validation to stop users from sending a form without an answer in a required field, defined by `required aria-required="true"`.  If the form is submitted without the field, a warning message should be displayed.
 
 Another HTML5 form attribute that can be added to input fields is `autofocus`, that makes the form load with that field already focused (selected). 
 
-Most browsers autocomplete the values of form fields, where possible, if that setting is turned on. For sensitive data, or to ensure users pay attention when filling out that field, we can disable that option by writting the attribute `autocomplete="off"`. This attribute also works on the <form> tag.
+Most browsers auto-complete the values of form fields, where possible, if that setting is turned on. For sensitive data, or to ensure users pay attention when filling out that field, we can disable that option by writing the attribute `autocomplete="off"`. This attribute also works on the <form> tag.
 
-The `pattern` attrivute expects a regular expression and ensures the value passed on that field respects the regex. 
+The `pattern` attribute expects a regular expression and ensures the value passed on that field respects the regex. 
+
+<input id="date" type="date" name="date" /> is a date input. If the type is "data", the date picker is used to select a day of the month within a year.  If the type is "month", the date picker is used to select a month of a year. If the type is "week", the date picker is used to select a week within a year. If the type is "time", the date picker is used to select a time, in the 24h format. If the type is "datetime", the date picker is used to select a time of a certain day (a day of the month within a year). The type "datetime-local" is the same, but omits the time zone information.
+
+
+
+####  2. How to polyfill non-supporting browsers
+
+"Webshims Lib" loads the form polyfills needed to make non-supporting browsers handle them. 
+
+
+
+####  3. Styling HTML5 forms with CSS3
+
+To style forms, we could add `border-radius` and `background` gradients, and a subtle box-shadow. There are some form-specific pseudo selectors: 
+
+* `input:required:` for required fields
+* `input:focus:invalid:` for focused fields with an invalid value
+* `input:focus:valid:` for focused fields with a valid value
+
+We can use these to give users instant feedback.
+
