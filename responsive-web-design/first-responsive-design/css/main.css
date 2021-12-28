@@ -13,7 +13,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 	font-weight: inherit;
 	font-style: inherit;
-	font-size: 100%;
+	font-size: 97%;
 	font-family: inherit;
 	vertical-align: baseline;
 }
@@ -56,11 +56,29 @@ body {
     height: 130vh;
 }
 
+/* This underlines the current active navigation link on larger viewports */
+
+#home nav[role="navigation"] li:nth-child(1),#about nav[role="navigation"] li:nth-child(2),#offline nav[role="navigation"] li:nth-child(3),#redemptionPage nav[role="navigation"] li:nth-child(4),#video nav[role="navigation"] li:nth-child(5),#quiz nav[role="navigation"] li:nth-child(6) {
+	text-decoration: underline;
+}
+
+a {
+	color: #666;
+	transition: all 0.7s;
+}
+a:hover {
+	color: #000;
+}
+
+img[alt^="film"] {
+	border: 3px dashed #e15f5f;
+}
+
 #wrapper {
     display: table-row;
     margin-right: auto;
     margin-left: auto;
-    width: 90%;
+    width: 96%;
     max-width: 100vw;
     height: 130vh;
 }
@@ -80,50 +98,72 @@ header {
     width: 97.91667%; /* 940 ÷ 960 */
 }
 
-nav {
-    display: table;
-    padding-bottom: 25px; 
-    margin-top: 26px; 
-    margin-left: -1.0416667%;  /* 10 ÷ 960 */ 
-    padding-right: 1.0416667%; /* 10 ÷ 960 */ 
-    padding-left: 1.0416667%; /* 10 ÷ 960 */ 
-    max-width: 100vw;
-    background-repeat: repeat-x;  
-    border-bottom-color: #bfbfbf; 
-    border-bottom-style: double;
-    border-bottom-width: 4px; 
+#logo { 
+	display: block; 
+	padding-top: 75px; 
+	color: #0d0c0c; 
+	text-transform: uppercase; 
+	font-family: 'BebasNeueRegular'; 
+	font-size: 3em; /* 48 ÷ 16 = 3*/
 }
 
+#logo span { 
+	color: #dfdada; 
+}
+
+nav { 
+    font-size: 0.4em !important;
+	display: table; 
+	margin-bottom: 25px; 
+	margin-top: 26px; 
+	padding-right: 1.0416667%; /* 10 ÷ 960 */ 
+	padding-left: 1.0416667%; /* 10 ÷ 960 */ 
+	width: 97.9166667%; /* 940 ÷ 960 */ 
+	background: linear-gradient(top, hsla(0,0%,100%,0.11) 0%,hsla(0,0%,94%,0.11) 10%,hsla(0,0%,84%,0.11) 22%,hsla(0,0%,62%,0.11) 41%,hsla(0,0%,38%,0.11) 61%,hsla(0,0%,22%,0.11) 76%,hsla(0,0%,10%,0.11) 88%,hsla(0,0%,1%,0.11) 100%);
+	border-bottom-color: #bfbfbf; 
+	border-bottom-style: double; border-bottom-width: 4px; 
+}
+/* because we are using Modernizr we can provide a 'fork' style here for IE as it doesn't understand css gradients (as of v9 and below) */ 
+.-ms- nav {
+	padding-bottom: 25px; 
+	margin-top: 26px; 
+	background-repeat: repeat-x; 
+	background-image: url(../img/atwiNavBg.png); 
+}
 nav ul {
-    display: table-row;
+	display: table-row;
+	width: 100%;
 }
-
 nav ul li { 
-    display: table-cell;
-    margin-right: 2.6595745%; /* 25 ÷ 940 */    
+	text-align: center; 
+	display: table-cell;
+	margin-left: 1.3%;
+	margin-right: 1.3%;
 }
-
 nav ul li:last-child {
-    text-align: right;
+	text-align: right;
 }
-
 nav ul li:first-child {
-    text-align: left;
+	text-align: left;
 }
-
 nav ul li a { 
-    height: 42px; 
-    line-height: 42px; 
-    text-decoration: none; 
-    text-transform: uppercase; 
-    font-family: 'BebasNeueRegular'; 
-    font-size: 1.875em; /*30 ÷ 16 */
-    color: #000000;
-    text-shadow: 0 1px 0 hsla(0, 0%, 50%,1);
+	height: 42px;
+	text-decoration: none; 
+	text-transform: uppercase;  
+	color: black; 
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1.0);
+	font: 1.875em/42px 'BebasNeueRegular';
+	display: block;	
 }
-
+nav ul li a:hover {
+	animation: warning 1.5s infinite ease-in;
+}
 nav ul li:nth-child(odd) a {
-    color: rgb(254, 2, 8);
+	color: fe0208;
+	color: hsl(359, 99%, 50%);
+}
+nav ul li:nth-child(odd) a:hover {
+	color: hsl(359, 99%, 40%);
 }
 
 aside {
@@ -173,6 +213,7 @@ aside {
     float: right;
     margin-left: 1.041667%;  /* 10 ÷ 960 */
     width: 72.708333%;
+    height: 100%;
 }
 
 #content h1 { 
@@ -310,6 +351,135 @@ footer {
     nav ul li a {
         font-size: 1.1em;
     }
+}
+
+@media screen and (min-width: 300px) and (max-width: 400px) {
+	#logo {
+		font-size: 1.5em;
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+	.Qcontainer {
+		width: 100%;
+		clear: left;
+	}
+	.film {
+		height: 28em;
+	}
+	#wrapper {
+		margin: 0px;
+		width: 100%;
+	}
+	#content li {
+		margin-top: 3px;
+		font: 1.25em 'BebasNeueRegular';
+	}
+	nav ul li {
+		margin: 0px;
+		font-size: 0.9em;
+		line-height: 0.8em;
+	}
+	nav ul li a {
+		margin: 0px;
+	}
+	nav ul li a:hover {
+		margin-left: 5%;
+		background-color: #d6d5d5;
+		padding-left: 2%;
+	}
+	#content h1 {
+		font-size: 3em;
+		text-shadow: 0 1px white, 2px 2px 0 #DAD7D7;
+	}
+	#content h2 {
+		font-size: 1.2em;
+	}
+	#content p {
+		font-size: 1.1em;
+		line-height: 1.3em;
+	}
+	#content a.button {
+		font-size: 1.2em;
+		width: 94%;
+		margin-top: 2%;
+		text-align: center;
+	}
+	img.oscarMain {
+		height: auto;
+		width: 19%;
+		margin-right: 1%;
+	}
+	#redemption input#submit {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 475px) and (max-width: 600px) {
+	#content h1 {
+		font-size: 5em;
+		text-shadow: 0 1px white, 2px 2px 0 #DAD7D7;
+	}
+	#content h1 em {
+		font-size: 0.4em;
+		
+	}
+	#content h2 {
+		font-size: 2.5em;
+	}
+	#content p {
+		font-size: 1.25em;
+		line-height: 1.3em;
+	}
+	#content a.button {
+		font-size: 1.8em;
+		width: 94%;
+		margin-top: 2%;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	
+	nav {
+		display: block;
+		background: none;
+	}
+	nav ul {
+		 display: block;
+	}
+	nav ul li {
+		display: list-item;
+		color: red;
+		text-align: left;
+	}
+	nav ul li:first-child,nav ul li:last-child {
+		text-align: left;
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	#body {width: 96%; margin: 2%; padding: 0px; margin-bottom: 0px;
+	}	
+	#logo { text-align:center; }
+	
+	#content,aside { margin-top: 20px; width: 96%;margin: 2%;}
+	.oscarMain { margin-right: 30px; margin-top: 0px; width: 20%; height: 394px; }
+	aside { border-right: none; border-top: 2px solid #e8e8e8; padding-top: 20px; margin-bottom: 20px; }
+	.sideBlock { width: 96%; margin: 2%; }
+	.overHyped { margin-top: 0px; }
+}
+
+@media screen and (min-width: 1000px) {
+	#content h1 {
+		font-size: 8em;
+	}
+	#content p {
+		font-size: 2.3em;
+		line-height: 1.2em;
+		margin-top: 1%;
+	}
 }
 
 /* These are @font-tace files, from font-squirrel */
