@@ -644,6 +644,8 @@ In the example above, we define the `@keyframes` and give it a name: "warning". 
 
 It is also possible to specify `animation-delay` (to delay when the animation starts), `animation-play-state` (can be set to running or paused) and `animation-fill-mode`.
 
+
+
 ### :pencil: Conquer Forms with HTML5 and CSS3 :pencil:
 
 
@@ -681,4 +683,10 @@ To style forms, we could add `border-radius` and `background` gradients, and a s
 * `input:focus:valid:` for focused fields with a valid value
 
 We can use these to give users instant feedback.
+
+
+
+### :crossed_flags: Resolving Cross-browser Responsive Challenges :crossed_flags:
+
+
 
