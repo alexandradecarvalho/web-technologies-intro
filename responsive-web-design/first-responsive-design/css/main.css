@@ -18,6 +18,10 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	vertical-align: baseline;
 }
 
+*{
+    transition: all 1s;
+}
+
 :focus {
 	outline: 0;
 }
@@ -170,14 +174,39 @@ aside {
     border-right-color: #e8e8e8;
     border-right-style: solid;
     border-right-width: 2px;
+    margin-top: 28px;
     margin-right: 1.041667%;  /* 10 ÷ 960 */
     margin-left: 1.041667%;  /* 10 ÷ 960 */
     float: left;
     width: 22.798333%;
 }
 
+aside h2 { 
+	margin-bottom: 20px; 
+	font-family: 'BebasNeueRegular'; 
+	font-size: 1.875em; /* 30px ÷ 16 */ 
+	text-transform: uppercase; 
+}
+
+.element {
+	text-shadow: 4px 8px 1px #ccc;
+}
+
+.overHyped { 
+	margin-top: 27px; 
+}
+
+.sideImage {
+	margin-left: 3%;
+}
+
+.sideBlock {
+	width: 100%; /* 220 */
+    margin: 3% 0%;
+}
+
 .sideBlock img {
-    max-width: 45%;
+    max-width: 35%;
     box-shadow: 0px 3px 5px #444444;
 }
 
@@ -206,9 +235,11 @@ aside {
     margin-top: 28px; 
     width: 28.9398281%; /* 698 ÷ 202 */
     max-width: 202px;
+    margin-right: 1%;
 }
 
 #content {
+    margin-top: 28px;
     margin-right: 1.041667%;  /* 10 ÷ 960 */
     float: right;
     margin-left: 1.041667%;  /* 10 ÷ 960 */
@@ -217,12 +248,11 @@ aside {
 }
 
 #content h1 { 
-    font-family: Arial, Helvetica, Verdana, sans-serif; 
     text-transform: uppercase; 
-    font-size: 4.3125em;  /* 69 ÷ 16 */
+    font-size:6.375em;  /* 102 ÷ 16 */
     font-family: 'BebasNeueRegular';
-    font-size: 6.375em; /* 102 ÷ 16 */
     text-shadow: 0px 1px #ffffff,4px 4px 0px #dad7d7;
+    font-weight: 400;
 }    
 
 #content h1 em { 
@@ -232,6 +262,7 @@ aside {
     color: #757474;
     font-size: .352941176em; /* 36 ÷ 102 */
     text-shadow: none;
+    font-weight: 400;
 }
 
 #content h1 span { 
@@ -239,6 +270,44 @@ aside {
     line-height: 1.052631579em; /* 40 ÷ 38 */ 
     color: #757474; 
     font-size: .550724638em; /* 38 ÷ 69 */
+}
+
+#content h2 {
+	font-family: 'BebasNeueRegular'; 
+	font-size: 1.875em; /* 30px ÷ 16 */ 
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+#content h3 {
+	font-family: 'BebasNeueRegular'; 
+	font-size: 1.2em;  
+	color: #bfbfbf;
+	font-weight: 400;
+}
+
+#content p { 
+	font-family: 'ColaborateThinRegular';
+	line-height: 40px; 
+	color: #757474; 
+	font-size: 1.875em; /* 24px ÷ 16 */ 
+}
+#content p em {
+	text-decoration: underline;
+}
+
+#content p i {
+	font-weight: normal;
+	font-style: normal;
+}
+#content li {
+	margin-top: 10px;
+	font: 2.25em 'BebasNeueRegular';
+}
+
+#content li:before {
+	content: '\2254';
+	margin-right: 1%;
 }
 
 #content a {
@@ -269,6 +338,7 @@ aside {
 }
 
 footer {
+    margin-top: 20px;
     float: left;
     margin-right: 1.041667%;  /* 10 ÷ 960 */
     margin-left: 1.041667%;  /* 10 ÷ 960 */

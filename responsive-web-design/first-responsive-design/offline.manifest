@@ -1,7 +1,7 @@
 CACHE MANIFEST
 #v1
+
 CACHE:
-home.html
 css/main.css
 imgs/Academy_Award_trophy.png
 imgs/flags.jpg
@@ -14,4 +14,4 @@ NETWORK:
 *
 
 FALLBACK:
-/ /offline.html
+/ offline.html
