@@ -690,3 +690,32 @@ We can use these to give users instant feedback.
 
 
 
+#### 1. Progressive enhancement versus graceful degradation
+
+**Graceful degradation** means creating a site for modern browsers but ensuring older versions (untill a certain cut-off point) have a usable experience, or, at least, get a warning about the problems they will face while using that browser.
+
+**Progressive enhancement** start by writing code that is usable by all browsers, and from there enhances it through CSS and, if needed, JavaScript. This is currently considered the best practice. 
+
+
+
+#### 2. Should you fix older versions of Internet Explorer?
+
+It is possible to polyfill the majority of features to older browsers, but it could worsen the performance and it certainly is a time-consuming task, which won't give a lot of benefits, because the use of older browsers is diminishing, while the usage of modern browsers is increasing. 
+
+
+
+#### 3. Modernizr - the frontend developer's Swiss army knife
+
+Modernizr is an open source JavaScript library that "feature tests" a browser's capabilities, to find out whether a browser supports a certain feature. This automatically fixes styling issues for older browsers and also allows us to conditionally load additional CSS or JS files, only when needed.
+
+
+
+#### 4. Changing navigation links to a drop menu conditionally
+
+Having many navigation links on a page can take up a big portion of the screen, which is a problem in smaller viewports, so it would be better to have a drop menu when a viewport is below a certain limit. There are a few pre-written scripts for achieving this.
+
+
+
+#### 5. High resolution devices 
+
+Devices are changing all the time, and it is not just viewport size that can differ, the resolution can too. To adapt, media queries can also target different resolutions. However, many large images equate to longer download times, so this means there is, as always, a tradeoff to consider.
